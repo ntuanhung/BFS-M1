@@ -1,27 +1,32 @@
-# PyTorch Build for Apple Silicon
-**NOTE**: This document is useful only for **scratch build** from source code for Apple Silicon.
+# PyTorch Build-From-Source for Apple Silicon
+**NOTE**: This document is useful only for **scratch build** from PyTorch source code for Apple Silicon (or M1 chips such as M1, M1 Pro, M1 Max).
+
 
 ## Work-flow
 - install prerequisites
 - download pytorch source from repository
 - install pytorch through a wheel-build
 
-## Test Environment
+
+## Test Environment @2022/03/01
+- Macbook Pro 14inch, 2021 with Chip M1 Pro (CPU 10 cores, GPU 16 cores), RAM 16GB, SSD 1TB
+- macOS Montorey 12.2.1
 - Python 3.9.8
-- macOS Montorey (ver.12.0.1)
-- PyTorch 1.12 (2022/02/23@JST)
+- PyTorch 1.12
+
+
 ## Prerequisite Installation
 
-### - CMake
+### - CMake --> install via conda instead of homebrew
 **NOTE**: Compilation needs version 3.13 or greater of cmake.
 ```
 $brew install cmake
 ```
-### - OpenBLAS
+### - OpenBLAS --> install via conda instead of homebrew
 ```
 $brew install openblas
 ```
-### - Yaml
+### - Yaml --> install via conda instead of homebrew
 ```
 $python3 -m pip install pyyaml
 ```
@@ -36,7 +41,7 @@ Enter to the directory;
 $cd pytorch
 ```
 
-## Setting CMakeList.txt
+## Setting CMakeList.txt -> even without these following changes, I has successfully built and installed PyTorch from source.
 At line 184,
 Apple Silicon does not support NVIDIA's CUDA;
 ```
