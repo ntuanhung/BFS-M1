@@ -1,6 +1,9 @@
 # PyTorch Build-From-Source for Apple Silicon
 **NOTE**: This document is useful only for **scratch build** from PyTorch source code for Apple Silicon (or M1 chips such as M1, M1 Pro, M1 Max).
 
+## References
+- Blog: https://www.hendrik-erz.de/post/setting-up-python-numpy-and-pytorch-natively-on-apple-m1
+- GitHub Issue: https://github.com/pytorch/pytorch/issues/48145
 
 ## Work-flow
 - install prerequisites
