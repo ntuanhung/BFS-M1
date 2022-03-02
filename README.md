@@ -8,11 +8,12 @@ https://naturale0.github.io/2021/01/29/setting-up-m1-mac-for-both-tensorflow-and
 ## Tools
 
 ### HomeBrew
+- Download HomeBrew
 ```
 mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 ```
 
-Then
+- Then update
 ```
 eval "$(homebrew/bin/brew shellenv)"
 brew update --force --quiet
@@ -20,6 +21,23 @@ chmod -R go-w "$(brew --prefix)/share/zsh"
 ```
 
 Note that the one-liner installation method found on brew.sh requires the **Bourne-again shell**, i.e. ***bash***. Notably, ***zsh***, ***fish***, ***tcsh*** and ***csh*** will not work.
+
+
+- Add Homebrew to your PATH in /Users/$USER/.zprofile:
+```
+echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/$USER/.zprofile
+eval $(/opt/homebrew/bin/brew shellenv)
+```
+
+- Export PATH with the HomeBrew bin directory into .zshrc file
+as default
+```
+export PATH=/usr/local/bin:$PATH
+```
+OR your installed location
+```
+export PATH="/users/XXXX/tools/homebrew/bin:$PATH"
+```
 
 ### Miniconda
 https://docs.conda.io/projects/conda/en/4.6.0/user-guide/install/macos.html
