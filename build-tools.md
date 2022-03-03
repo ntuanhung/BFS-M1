@@ -54,3 +54,13 @@ https://developer.apple.com/documentation/createml
 
 # Miniforge
 This is a minimalist conda-forge which is easy to install conda packages with different configurations (x86_64 or Apple Silicon) at https://github.com/conda-forge/miniforge
+
+
+# Visual Studio for Mac
+This IDE is used to develop and debug the C# console app on MacOS.
+https://docs.microsoft.com/en-us/visualstudio/mac/installation?view=vsmac-2019
+
+# Visual Studio Code - Insiders
+This IDE is used to develop and debug the Python app on MacOS as well as work on remote servers.
+https://code.visualstudio.com/blogs/2016/05/23/evolution-of-insiders
+
